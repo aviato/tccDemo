@@ -1,0 +1,7 @@
+.customSelect {
+  border: 1px solid black;
+}
+
+.optionsForm:nth-child(even) {
+  background-color: grey;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="tccDemo">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>tccDemo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+    integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="lib/magicSuggest/magicsuggest.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+    integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="lib/magicSuggest/magicsuggest-min.js"></script>
+    <script src="lib/angular-magicsuggest.js"></script>
+  </head>
+
+  <body ng-controller="MainAppCtrl">
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-xs-8 col-xs-offset-2 text-center">
+          <h1>Online Appointment Scheduler</h1>
+        </div>
+
+        <div class="col-xs-8 col-xs-offset-2">
+          <h2>Vehicle</h2>
+          <p>Please describe your vehicle so we can select appropriate service options for you:</p>
+        </div>
+
+        <hr>
+
+      </div>
+
+      <div class="row">
+
+        <form class="optionsForm">
+
+          <div class="form-group">
+
+
+            <div class="col-xs-8 col-xs-offset-2">  
+              <label for="make">Make: </label>
+              <magic-suggest type="makeConfig" ng-model="appData.make" placeholder="Vehicle Make" />
+            </div>
+
+
+            <div class="col-xs-8 col-xs-offset-2">
+              <label for="modelYear">Model Year: </label>
+              <magic-suggest type="modelYearConfig" ng-model="appData.modelYear" placeholder="------" />
+            </div>
+
+<!--             <div class="col-xs-8 col-xs-offset-2" ng-show="appData.modelYear">
+              <label for="model">Model: </label>
+              <magic-suggest type="modelConfig" ng-model="appData.model" placeholder="------" />
+            </div> -->
+
+<!--             <div class="col-xs-8 col-xs-offset-2" ng-show="appData.model">
+              <label for="vehicleConfig">Vehicle Configurations: </label>
+              <div class="magic-suggest-vehicleConfig"></div>
+            </div>
+
+            <div class="col-xs-8 col-xs-offset-2">
+              <label for="mileage">Mileage: </label>
+              <input type="text" class="form-control">
+            </div> -->
+
+          </div>
+
+
+        </form>
+        
+      </div>
+
+      <div class="row">
+
+        <div class="col-xs-8 col-xs-offset-2 text-center">
+          <button type="button" class="btn btn-success" style="margin-top: 15px;">Next</button>
+        </div>          
+
+      </div>
+
+    </div>
+
+    <script src="app.js"></script>
+    <script src="msConfig.js"></script>
+  </body>
+</html>
