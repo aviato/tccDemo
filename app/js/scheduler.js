@@ -67,7 +67,7 @@
           },
           {
             name: 'Corolla',
-            availableYears: generateYears(1990, 2016),
+            availableYears: generateYears(1990, 2017),
             configurations: [
               'L 1.8L Automatic',
               'L 1.8L Manual',
@@ -81,7 +81,7 @@
         models: [
           {
             name: 'Outback',
-            availableYears: generateYears(1990, 2016),
+            availableYears: generateYears(1990, 2017),
             configurations: [
               '2.5i 2.5L CVT',
               '2.5i Limited 2.5L CVT',
@@ -91,7 +91,7 @@
           },
           {
             name: 'Impreza',
-            availableYears: generateYears(1990, 2016),
+            availableYears: generateYears(1990, 2017),
             configurations: [
               'Base Manual',
               'Base CVT',
@@ -101,7 +101,7 @@
           },
           {
             name: 'Legacy',
-            availableYears: generateYears(1990, 2016),
+            availableYears: generateYears(1990, 2017),
             configurations: [
               '2.5i 2.5L CVT',
               '2.5i Limited 2.5L CVT',
@@ -114,7 +114,7 @@
     }
   };
 
-  var generatedYears = generateYears(1990, 2016);
+  var generatedYears = generateYears(1990, 2017);
   var manufacturers  = Object.getOwnPropertyNames(mockData.manufacturers);
 
   $(function() {
@@ -136,21 +136,25 @@
 
     // initialize magicsuggest forms with no data
     make = $('#make').magicSuggest({
+      allowFreeEntries: false,
       data: manufacturers,
       maxSelection: 1
     });
 
     modelYear = $('#model-year').magicSuggest({
+      allowFreeEntries: false,
       data: [],
       maxSelection: 1
     });
 
     model = $('#model').magicSuggest({
+      allowFreeEntries: false,
       data: [],
       maxSelection: 1
     });
 
     vehicleConfig = $('#vehicle-config').magicSuggest({
+      allowFreeEntries: false,
       data: [],
       maxSelection: 1
     });
@@ -171,7 +175,7 @@
         vehicleConfig.clear();
       }
 
-      modelYear.setData(generatedYears);
+      modelYear.setData(generatedYears.sort(function(a, b) { return b - a; }));
 
       if (this.getValue().length) {
         $('.model-year-container').show();
@@ -217,13 +221,13 @@
 
       if (this.getValue().length) {
         $('.vehicle-config-container').show();
-        $('.btn').removeClass('btn-danger');
-        $('.btn').removeClass('disabled');
-        $('.btn').addClass('btn-success');
+        $('.next-btn').removeClass('btn-danger');
+        $('.next-btn').removeClass('disabled');
+        $('.next-btn').addClass('btn-success');
       } else {
-        $('.btn').addClass('btn-danger');
-        $('.btn').addClass('disabled');
-        $('.btn').removeClass('btn-success');
+        $('.next-btn').addClass('btn-danger');
+        $('.next-btn').addClass('disabled');
+        $('.next-btn').removeClass('btn-success');
       }
 
     });

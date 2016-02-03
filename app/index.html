@@ -22,24 +22,27 @@
     <div class="container">
 
       <div class="row">
-
-        <div class="col-xs-8 col-xs-offset-2 text-center">
+        <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2 text-center">
           <h1>Online Appointment Scheduler</h1>
         </div>
+      </div>
 
-        <div class="col-xs-8 col-xs-offset-2">
+      <div class="row">
+
+        <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
           <h2>Vehicle</h2>
           <p>Please describe your vehicle so we can select appropriate service options for you:</p>
-          <ul class="nav nav-tabs">
-            <li role="presentation" class="active"><a href="#">Vehicle</a></li>
-            <li role="presentation" class="disabled"><a href="#">Repairs</a></li>
-            <li role="presentation" class="disabled"><a href="#">Maintenance</a></li>
-            <li role="presentation" class="disabled"><a href="#">Date / Time</a></li>
-            <li role="presentation" class="disabled"><a href="#">Confirm</a></li>
-          </ul>
-        </div>
 
-        <hr>
+          <div class="btn-toolbar" role="toolbar" aria-label="...">
+            <div class="btn-group btn-group-xs" role="group" aria-label="">
+              <button type="button" class="btn btn-default active">Vehicle</button>
+              <button type="button" class="btn btn-default disabled">Repairs</button>
+              <button type="button" class="btn btn-default disabled">Maintenance</button>
+              <button type="button" class="btn btn-default disabled">Date / Time</button>
+              <button type="button" class="btn btn-default disabled">Confirm</button>
+            </div>
+          </div>
+        </div>
 
       </div>
 
@@ -49,27 +52,27 @@
 
           <div class="form-group">
 
-            <div class="col-xs-8 col-xs-offset-2 make-container">
+            <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2 make-container">
               <label for="make">Make: </label>
               <div id="make"></div>
             </div>
 
-            <div class="col-xs-8 col-xs-offset-2 model-year-container">
+            <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2 model-year-container">
               <label for="model-year">Model Year: </label>
               <div id="model-year"></div>
             </div>
 
-            <div class="col-xs-8 col-xs-offset-2 model-container">
+            <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2 model-container">
               <label for="model">Model: </label>
               <div id="model"></div>
             </div>
 
-            <div class="col-xs-8 col-xs-offset-2 vehicle-config-container">
+            <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2 vehicle-config-container">
               <label for="vehicle-config">Vehicle Configuration: </label>
               <div id="vehicle-config"></div>
             </div>
 
-            <div class="col-xs-8 col-xs-offset-2 mileage-container">
+            <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2 mileage-container">
               <label for="mileage">Mileage: </label>
               <input id="mileage" type="text" class="form-control">
             </div>
@@ -84,7 +87,7 @@
       <div class="row">
 
         <div class="col-xs-8 col-xs-offset-2 text-center">
-          <button type="button" class="btn btn-danger disabled" style="margin-top: 15px;">Next</button>
+          <a href="success.html"><button type="button" class="btn btn-danger next-btn disabled" style="margin-top: 15px;">Next</button></a>
         </div>
 
       </div>

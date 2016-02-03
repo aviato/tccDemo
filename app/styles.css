@@ -1,3 +1,10 @@
 /*.form-group .col-xs-8:nth-child(even) {
   background-color: grey;
 }*/
+
+.success-gif {
+  min-height: 250px;
+  min-width: 250px;
+  height: 450px;
+  width: 600px;
+}
