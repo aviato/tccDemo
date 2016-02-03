@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en" ng-app="tccDemo">
+<html lang="en">
 
   <head>
     <meta charset="utf-8">
@@ -12,14 +12,12 @@
     <link href="lib/magicSuggest/magicsuggest.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
     integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script src="lib/magicSuggest/magicsuggest-min.js"></script>
-    <script src="lib/angular-magicsuggest.js"></script>
   </head>
 
-  <body ng-controller="MainAppCtrl">
+  <body>
 
     <div class="container">
 
@@ -32,6 +30,13 @@
         <div class="col-xs-8 col-xs-offset-2">
           <h2>Vehicle</h2>
           <p>Please describe your vehicle so we can select appropriate service options for you:</p>
+          <ul class="nav nav-tabs">
+            <li role="presentation" class="active"><a href="#">Vehicle</a></li>
+            <li role="presentation" class="disabled"><a href="#">Repairs</a></li>
+            <li role="presentation" class="disabled"><a href="#">Maintenance</a></li>
+            <li role="presentation" class="disabled"><a href="#">Date / Time</a></li>
+            <li role="presentation" class="disabled"><a href="#">Confirm</a></li>
+          </ul>
         </div>
 
         <hr>
@@ -44,51 +49,47 @@
 
           <div class="form-group">
 
-
-            <div class="col-xs-8 col-xs-offset-2">  
+            <div class="col-xs-8 col-xs-offset-2 make-container">
               <label for="make">Make: </label>
-              <magic-suggest type="makeConfig" ng-model="appData.make" placeholder="Vehicle Make" />
+              <div id="make"></div>
             </div>
 
-
-            <div class="col-xs-8 col-xs-offset-2">
-              <label for="modelYear">Model Year: </label>
-              <magic-suggest type="modelYearConfig" ng-model="appData.modelYear" placeholder="------" />
+            <div class="col-xs-8 col-xs-offset-2 model-year-container">
+              <label for="model-year">Model Year: </label>
+              <div id="model-year"></div>
             </div>
 
-<!--             <div class="col-xs-8 col-xs-offset-2" ng-show="appData.modelYear">
+            <div class="col-xs-8 col-xs-offset-2 model-container">
               <label for="model">Model: </label>
-              <magic-suggest type="modelConfig" ng-model="appData.model" placeholder="------" />
+              <div id="model"></div>
             </div>
 
-            <div class="col-xs-8 col-xs-offset-2" ng-show="appData.model">
-              <label for="vehicleConfig">Vehicle Configurations: </label>
-              <div class="magic-suggest-vehicleConfig"></div>
+            <div class="col-xs-8 col-xs-offset-2 vehicle-config-container">
+              <label for="vehicle-config">Vehicle Configuration: </label>
+              <div id="vehicle-config"></div>
             </div>
 
-            <div class="col-xs-8 col-xs-offset-2">
+            <div class="col-xs-8 col-xs-offset-2 mileage-container">
               <label for="mileage">Mileage: </label>
-              <input type="text" class="form-control">
-            </div> -->
+              <input id="mileage" type="text" class="form-control">
+            </div>
 
           </div>
 
 
         </form>
-        
+
       </div>
 
       <div class="row">
 
         <div class="col-xs-8 col-xs-offset-2 text-center">
-          <button type="button" class="btn btn-success" style="margin-top: 15px;">Next</button>
-        </div>          
+          <button type="button" class="btn btn-danger disabled" style="margin-top: 15px;">Next</button>
+        </div>
 
       </div>
 
     </div>
-
-    <script src="app.js"></script>
-    <script src="msConfig.js"></script>
+    <script src="js/scheduler.js"></script>
   </body>
 </html>

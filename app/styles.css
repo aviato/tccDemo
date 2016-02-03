@@ -1,7 +1,3 @@
-.customSelect {
-  border: 1px solid black;
-}
-
-.optionsForm:nth-child(even) {
+/*.form-group .col-xs-8:nth-child(even) {
   background-color: grey;
-}
+}*/
